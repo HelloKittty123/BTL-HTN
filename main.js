@@ -63,31 +63,9 @@ database.ref("TT_IoT/Pir").on("value", function(snapshot) {
     var ss = snapshot.val();
     if(ss == 1) {
         document.getElementById("warn-value").innerHTML = "WARNING";
-        setInterval(function() {
-            if(document.getElementById("warning").style.backgroundColor === "rgb(223, 77, 85)") {
-                document.getElementById("warning").style.backgroundColor = "black";
-            } else {
-                document.getElementById("warning").style.backgroundColor = "#df4d55";
-            }
-            console.log(document.getElementById("warning").style.backgroundColor === "rgb(223, 77, 85)");
-    }, 500);
-        
+        document.getElementById("warning").style.backgroundColor = "#df4d55";
     } else {
         document.getElementById("warn-value").innerHTML = "SAFE";
         document.getElementById("warning").style.backgroundColor = "#0070fc";
     }
 });
-// function changeColor() {
-//     const background = document.getElementById("warning");
-//     const arrayColor = ['#df4d55', 'black'];
-//     setInterval(function() {
-//             if(document.getElementById("warning").backgroundColor === "#df4d55") {
-//                 document.getElementById("warning").style.backgroundColor = "#black";
-//             } else {
-//                 document.getElementById("warning").style.backgroundColor = "#df4d55";
-//             }
-//     }, 500);
-// }
-
-
-// #df4d55
