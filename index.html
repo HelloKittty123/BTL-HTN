@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BÀI TẬP LỚN HỆ THỐNG NHÚNG</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <img src="./img/SmartHome.png" alt="Ảnh Smart Home" class="header-image">
+            <div class="header-title">HỆ THỐNG SMART HOME</div>
+        </div>
+        <div class="container">
+            <div class="grid__column-6">
+                <div class="tab-page temperature">
+                    <img src="./img/temp.png" alt="Nhiệt độ" class="tab-image">
+                    <span class="tab-content">Nhiệt độ:</span>
+                    <span id="temp-value"></span>
+                </div>
+            </div>
+            <div class="grid__column-6">
+                <div class="tab-page humidity">
+                    <img src="./img/hum.jpg" alt="Độ ẩm" class="tab-image">
+                    <span class="tab-content">Độ ẩm:</span>
+                    <span id="hum-value"></span>
+                </div>
+            </div>
+            <div class="grid__column-6">
+                <div class="tab-page led">
+                    <button id="LightButton">
+                        <img src="./img/LightOn.png" alt="Bóng đèn tắt" id="ImageLight" class="tab-image">
+                        <span class="tab-content" id="LightMode"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid__column-6">
+                <div class="tab-page" id="warning">
+                    <img src="./img/Warn.png" alt="Cảnh báo" class="tab-image">
+                    <span class="tab-content" id="warn-value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src='main.js'></script>
+</body>
+</html>
